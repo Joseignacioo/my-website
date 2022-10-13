@@ -1,0 +1,133 @@
+:root{
+    /*========== FONT FAMILY ==========*/
+
+    /*========== COLORS ==========*/
+    --body: rgb(245, 245, 245);
+    --first-color: rgb(117, 117, 117);
+    /*========== SIZE ==========*/
+
+
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: var(--body);
+}
+.container{
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+h1{
+    margin: 5rem;
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 0px  0px 5px rgb(139, 131, 131);
+}
+/*========== HEADER ==========*/
+header{
+    background-color: rgb(219, 219, 219);
+    width: 100%;
+
+}
+header .header-link ul{
+    display: flex;
+}
+header .header-link ul li{
+    list-style: none;
+    padding: 0.5rem;
+}
+header .header-link ul li a{
+    text-decoration: none;
+    color: var(--first-color);
+}
+header .header-link ul li a:hover{
+    text-decoration: underline;
+    color: rgb(139, 131, 131);
+    
+}
+/*========== END HEADER ==========*/
+/*========== NAV ==========*/
+nav{
+    background-color: rgb(235, 235, 235);
+    width: 100%;
+    box-shadow: 0px 0px 2.5px rgb(139, 131, 131);;
+}
+nav .nav-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+nav .nav-body .nav-logo ul{
+    list-style: none;
+}
+nav .nav-body .nav-logo ul a{
+    color: black;
+    text-decoration: none;
+    font-size: large;
+}
+nav .nav-body .nav-logo ul a:hover{
+    color: black;
+    text-decoration: overline rgb(124, 106, 106)
+    ;
+}
+nav .nav-body .nav-link ul{
+    list-style: none;
+    display: flex;
+    padding: 1.5rem;
+}
+nav .nav-body .nav-link ul a{
+    color: black;
+    text-decoration: none;
+    font-size: large;
+    padding: 1.5rem;
+}
+nav .nav-body .nav-link ul a:hover{
+    background-color: #d6c9b8;
+    text-shadow: 0px  0px 5px rgb(139, 131, 131);
+    text-decoration: overline;
+    color: #fff;
+}
+/*========== END NAV ==========*/
+/*========== MAIN ==========*/
+
+main .main-header{
+    text-align: center;
+    background-color: #d6c9b8;
+    box-shadow: 0px  0px  3px gray;
+}
+
+
+
+
+
+@media (max-width: 1024px){
+    .container{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    h1{
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 768px){
+    .container{
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+    h1{
+        margin: 3rem;
+        font-size: 3.5rem;
+    }
+}
+@media (max-width: 320px){
+    .container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+}
