@@ -4,10 +4,14 @@
 :root{
     /*========== COLORS ==========*/
     --body: rgb(252, 252, 252);
-    --first-color: rgb(32, 32, 32);
+    --first-color-dark: rgb(32, 32, 32);
+    --first-color-light: #fff;
     --second-color: rgb(61, 61, 61);
+    --text-shadow: 0px  0px 5px rgb(139, 131, 131);
+    --box-shadow: #bfae95;
     /*========== SIZE ==========*/
-    --xlarge-font-size: 3rem;
+    --xxlarge-font-size: 3rem;
+    --xlarge-font-size: 2rem;
     --large-font-size: 1.4rem;
     --normal-font-size: 1.2rem;
     --small-font-size: 0.875rem;
@@ -20,32 +24,44 @@
     list-style: none;
     text-decoration: none;
     font-family: "Poppins";
-    text-align: center;
 }
-
 body{
     background-color: var(--body);
+        text-align: center;
 }
 .container{
     margin-left: 10%;
     margin-right: 10%;
 }
 h1{
-    font-size: var(--xlarge-font-size);
-    color: #fff;
-    text-shadow: 0px  0px 5px rgb(139, 131, 131);
+    font-size: var(--xxlarge-font-size);
+    color: var(--first-color-light);
+    text-shadow: var(--text-shadow)
 }
 h2{
     margin: 1rem;
     font-size: var(--large-font-size);
     color: var(--second-color);
 }
+i{
+    background-color:var(--box-shadow);
+    font-size: var(--xlarge-font-size);
+    color: var(--first-color-light);
+    border-radius: 5px;
+}
+i:hover{ 
+    transform: scale(0.9);
+    color: #f2f2f2;
+}
+
 /*========== NAV ==========*/
 nav{
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.604);
     width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    position: fixed;
+    top: 0%;
 }
 nav .nav-body{
     display: flex;
@@ -62,7 +78,7 @@ nav .nav-body .nav-logo a{
 }
 nav .nav-body .nav-logo a:hover{
     color: black;
-    text-decoration: overline rgb(124, 106, 106);
+    text-decoration: overline var(--box-shadow);
 }
 /* link */
 nav .nav-body .nav-link a{
@@ -71,39 +87,55 @@ nav .nav-body .nav-link a{
     font-size: var(--normal-font-size);
     padding: 0.5rem;
     border-radius: 10px;
-    border: 0.1rem #bfae95 solid;
+    border: 0.1rem var(--box-shadow) solid;
 }
 nav .nav-body .nav-link a:hover{
-    background-color: #bfae95;
-    text-shadow: 0px  0px 5px rgb(139, 131, 131);
+    background-color:var(--box-shadow);
+    text-shadow: 0px  0px 5px var(--text-shadow);
     text-decoration: overline;
-    color: #fff;
+    color: var(--first-color-light);
 }
 /*========== END NAV ==========*/
+/*========== ASIDE ==========*/
+aside{
+    width: 3rem;
+    padding-top: 5px;
+    position: fixed;
+    display: grid;
+    margin-top: 200px;
+}
+/*========== END ASIDE ==========*/
 /*========== MAIN ==========*/
 main .main-header{
     padding-top: 10rem;
     padding-bottom: 10rem;
 }
+/* columnas card */
 main .main-body .container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
 }
+/* card */
 main .card{
     width: 300px;
     height: 400px;
     margin: 1rem;
-    background-color: #fff;
+    background-color: var(--first-color-light);
     border-radius: 30px;
+    box-shadow: 0px 2px 2px 0px var(--box-shadow);
 }
 main .card:hover{
-    box-shadow: 0px 0px 5px #bfae95;
+    box-shadow: 0px 0px 5px var(--box-shadow);
     transition: all 0.3s;
 }
 main .card img{
     width: 250px;
+}
+main .card img:hover{
+    transition: all 0.3s;
+    transform: scale(0.9);
 }
 main .card p{
     margin-left: 1rem;
@@ -111,27 +143,61 @@ main .card p{
     color: var(--second-color);
 }
 /*========== END MAIN ==========*/
+/*========== SECTION 1, 2 ==========*/
+section .section-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;    
+}
+/*========== END SECTION 1, 2 ==========*/
 /*========== FOOTER ==========*/
 footer{
-    background-color: #fff;
+    background-color: var(--first-color-light);
     margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
-footer i{
-    font-size: var(--xlarge-font-size);
-    color: #bfae95;
+footer .footer-body .container{
+    display: flex;
+    justify-content: space-around;
+
 }
-footer i:hover{
-    font-size: var(--xlarge-font-size);
-    color: #c0a680;
+footer .card{
+    width: 200px;
+    height: 270px;
+    margin: 1rem;
+    background-color: var(--first-color-light);
+    border-radius: 30px;
+    box-shadow: 1px 1px 0px 0px var(--box-shadow);
+}
+footer form{
+    width: 200px;
+    height: 250px;
+}
+footer .form-item{
+    text-align: left;
+    display: grid;
+    margin: 1rem;
+}
+footer input{
+    border-radius: 5px;
+    border: 0.1rem var(--box-shadow) solid;
 }
 
 /*========== END FOOTER ==========*/
 @media (max-width: 1024px){
-    
 }
 @media (max-width: 768px){
-    
+    h1{
+        font-size: var(--xlarge-font-size);
+    }
 }
 @media (max-width: 320px){
-    
+    h1{
+        font-size: var(--large-font-size);
+    }
 }
