@@ -8,16 +8,17 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Myblog</title>
 </head>
-<body>
+<body id="1">
     <!-- ========== NAV ========== -->
     <nav>
         <div class="container">
             <div class="nav-body">
                 <div class="nav-logo">
-                    <a href="">Myblog</a>
+                    <a href="#1">Myblog</a>
                 </div>
                 <div class="nav-link">
-                    <a href="">Inicio</a>
+                    <a href="#1">Inicio</a>
+                    <a href="#2">Contacto</a>
                 </div>
             </div>
         </div>
@@ -26,8 +27,8 @@
     <!-- ========== MAIN ========== -->
     <aside>
         <div class="main-aside">
-            <a href=""><i class='bx bxl-instagram'></i></a>
-            <a href=""><i class='bx bx-envelope'></i></a>
+            <a href="https://www.instagram.com/joseignvciioo/" target="_blank"><i class='bx bxl-instagram'></i></a>
+            <a href="#2"><i class='bx bx-envelope'></i></a>
             <a href=""><i class='bx bxl-whatsapp'></i></a>
         </div>
     </aside>
@@ -43,17 +44,17 @@
             <div class="container">
                 <div class="card">
                     <h3>Farmacia web</h3>
-                    <img src="/img/Logo sobre moda femenina minimalista neutral.png" alt="">
+                    <img src="img/Logo sobre moda femenina minimalista neutral.png" alt="">
                     <p>pharmacy-website en Python 3.10 Django, BD Oracle, HTML5, CSS, Bootstrap v5.2</p>
                 </div>
                 <div class="card">
                     <h3>Consultas Medicas</h3>
-                    <img src="/img/Logo sobre moda femenina minimalista neutral.png" alt="">
+                    <img src="img/Logo sobre moda femenina minimalista neutral.png" alt="">
                     <p>Aplicando la arquitectura del software en un sitioweb</p>
                 </div>
                 <div class="card">
                     <h3>Proximamente</h3>
-                    <img src="/img/Logo sobre moda femenina minimalista neutral.png" alt="">
+                    <img src="img/Logo sobre moda femenina minimalista neutral.png" alt="">
                     <p>...</p>
                 </div>
             </div>
@@ -97,21 +98,34 @@
         </div>
     </section>
     <!-- ========== END SECTION 3 ========== -->
+    <!-- ========== SECTION 4 ========== -->
+    <section>
+        <h2>Curriculum Vitae</h2>
+        <div class="container">
+            <ul>
+                <li><a href="cv/cv_JoseRomero.pdf" target="_blank">Click para descargar</a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- ========== END SECTION 4 ========== -->
     <!-- ========== FOOTER ========== --> 
-     <footer>
-        <h2>CONTACTAME</h2>
+     <footer id="2">
         <div class="footer-body">
             <div class="container">
                 <div class="card">
                     <form action="">
-                        <h2>Ingresa tus Datos</h2>
+                        <h2>Contactame</h2>
                         <div class="form-item">
                             <label for="">Nombre:</label>
-                            <input type="text" placeholder="Nombre" required>
+                            <input type="text" placeholder="Ingrese Nombre" required>
                         </div>
                         <div class="form-item">
                             <label for="">Email:</label>
-                            <input type="email" placeholder="Nombre" required>
+                            <input type="email" placeholder="Ingrese Email" required>
+                        </div>
+                        <div class="form-item">
+                            <label for="">Mensaje:</label>
+                            <input type="text" required>
                         </div>
                         <div class="form-item">
                             <input type="submit" value="Enviar">
